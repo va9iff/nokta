@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nokta</title>
+  </head>
+  <body>
+    <style>
+      :root,html,body{background-color:#fff}*{padding:0;margin:0;box-sizing:border-box;user-select:none}#root{width:100%;height:100vh;height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:#fff}#code{font-family:monospace;font-size:min(17vw, 20vh);font-weight:900;padding:calc(0.33 * min(17vw, 20vh));border-radius:calc(0.49 * min(17vw, 20vh));transition:border 400ms;border:calc(0.17 * min(17vw, 20vh)) solid #333}@keyframes loading{from{box-shadow:0 0 0 40px #ff00ff00,0 0 0 70px #00f0}to{box-shadow:0 0 0 0 #f0f,0 0 0 0 blue}}.isloading{animation:loading 777ms infinite;animation-delay:333ms}@keyframes loaded{from{box-shadow:0 0 0 0 #f0f,0 0 0 0 blue}to{box-shadow:0 0 0 40px #ffffff00,0 0 0 90px #2220}}.isloaded{animation:loaded 333ms;animation-delay:0ms}
+    </style>
+    <div id="root">
+      <div id="code"></div>
+    </div>
+    <script>
+      (()=>{"use strict";const t=[40.413639,49.855376],e=document.querySelector("div#code");e.innerText="..";let a=!1;const o=()=>{a||(a=!0,e.innerText="...",e.className="isloading",navigator.geolocation.getCurrentPosition((o=>{a=!1;const[n,i]=[o.coords.latitude,o.coords.longitude],[r,s]=((e,a)=>{const o=e-t[0],n=a-t[1],i=Math.floor(1e4*o),r=Math.floor(1e4*n),s=i<0?2*Math.abs(i)+1:2*Math.abs(i),c=r<0?2*Math.abs(r)+1:2*Math.abs(r);return[s.toString(36),c.toString(36)]})(n,i);e.innerText=`${r}.${s}`,e.className="isloading",e.className="isloaded";try{navigator.vibrate([33,9,333])}catch(t){}}),(t=>{a=!1,alert("Lütfən lokasiya xidmətinə icazə verin. \n\n\n"+t.code)}),{enableHighAccuracy:!0,timeout:5e3,maximumAge:3600}))};o(),e.addEventListener("touchstart",(()=>{o()}))})();
+    </script>
+  </body>
+</html>
+

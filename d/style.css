@@ -1,0 +1,44 @@
+#root {
+    padding-top: 2vh;
+}
+
+.col, .row {
+    display: flex;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.centered {
+    align-items: center;
+}
+
+.inputsRow {
+    gap: 15px;
+    margin-bottom: 20px
+}
+
+.coreinput {
+    font-size: 20px;
+    width: 120px;
+    border-radius: 14px;
+    border: 3px solid #333;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.googlemap {
+    padding: 30px 20px;
+    background-color: #aff;
+    color: #000;
+    font-family: sans-serif;
+    border-radius: 16px;
+    margin: 10px;
+    border: 2px solid #333;
+    text-decoration: none;
+}
+
+.leaflet {
+    height: 500px
+}
